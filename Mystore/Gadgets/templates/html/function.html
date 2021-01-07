@@ -1,0 +1,84 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %} C Learning {% endblock %}
+{% block content %}
+<div class="container mt-5">
+	<div class="card ml-auto row">
+		<center>
+		<img src="{% static 'images/c6.png' %}" style="width: 700px;">
+		</center>
+	</div>
+</div>
+<div class="container mt-5">
+	<div class="jumbotron ml-auto">
+		<H1><center>FUNCTIONS</center></H1>
+		<p><h5>A function is a group of statements that together perform a task. Every C program has at least one function, which is main(), and all the most trivial programs can define additional functions.</h5></p>
+
+       <p><h5>You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division is such that each function performs a specific task.</h5></p>
+
+       <p><h5>A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function.</h5></p>
+
+       <p><h5>The C standard library provides numerous built-in functions that your program can call. For example, strcat() to concatenate two strings, memcpy() to copy one memory location to another location, and many more functions.</h5></p>
+
+       <p><h5>A function can also be referred as a method or a sub-routine or a procedure, etc.</h5></p>
+
+       <p><h2><b>Defining a Function</b></h2></p>
+
+       <p><h5>The general form of a function definition in C programming language is as follows</h5></p>
+
+       <p><h5>return_type function_name( parameter list ) {</h5></p>
+
+       <p><h5><b>body of the function</b></h5></p>
+       <p><h5>}</h5></p>
+       <p><h5>A function definition in C programming consists of a function header and a function body. Here are all the parts of a function</h5></p>
+
+       <p><h5>Return Type − A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword void.</h5></p>
+
+       <p><h5>Function Name − This is the actual name of the function. The function name and the parameter list together constitute the function signature.</h5></p>
+
+       <p><h5>Parameters − A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.</h5></p>
+
+       <p><h5>Function Body − The function body contains a collection of statements that define what the function does.</h5></p>
+
+       <p><h5>Example program
+       Given below is the source code for a function called max(). This function takes two parameters num1 and num2 and returns the maximum value between the two</h5></p>
+
+       <p><h5>/* function returning the max between two numbers */</h5></p>
+       <p><h5>int max(int num1, int num2) {</h5></p>
+
+       <p><h5>/* local variable declaration */</h5></p>
+       <p><h5>int result;</h5></p>
+ 
+       <p><h5>if (num1 > num2)</h5></p>
+       <p><h5>result = num1;</h5></p>
+       <p><h5>else</h5></p>
+       <p><h5>result = num2;</h5></p>
+ 
+       <p><h5>return result;</h5></p>
+       <p><h5>}</h5></p>
+
+       <p><h2><b>Function Declarations</b></h2></p>
+
+       <p><h5>A function declaration tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.</h5></p>
+
+       <p><h5>A function declaration has the following parts</h5></p>
+
+       <p><h5>return_type function_name( parameter list );</h5></p>
+       <p><h5>For the above defined function max(), the function declaration is as follows</h5></p>
+
+       <p><h5>int max(int num1, int num2);</h5></p>
+       <p><h5>Parameter names are not important in function declaration only their type is required, so the following is also a valid declaration</h5></p>
+
+       <p><h5>int max(int, int);</h5></p>
+       <p><h5>Function declaration is required when you define a function in one source file and you call that function in another file. In such case, you should declare the function at the top of the file calling the function.</h5></p>
+
+       <p><h2><b>Calling a Function</b></h2></p>
+
+       <p><h5>While creating a C function, you give a definition of what the function has to do. To use a function, you will have to call that function to perform the defined task.</h5></p>
+
+       <p><h5>When a program calls a function, the program control is transferred to the called function. A called function performs a defined task and when its return statement is executed or when its function-ending closing brace is reached, it returns the program control back to the main program.</h5></p>
+
+       <p><h5>To call a function, you simply need to pass the required parameters along with the function name, and if the function returns a value, then you can store the returned value.</h5></p>
+	</div>
+</div>
+{% endblock %}

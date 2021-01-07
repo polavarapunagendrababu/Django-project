@@ -1,0 +1,86 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block title %} C Learning {% endblock %}
+{% block content %}
+<div class="container mt-5">
+	<div class="card ml-auto row">
+		<center>
+		<img src="{% static 'images/c4.jpg' %}" style="width: 700px;">
+		</center>
+	</div>
+</div>
+<div class="container mt-5">
+	<div class="jumbotron ml-auto">
+		<H1><center>ARRAYS</center></H1>
+		   <p><h5>Arrays a kind of data structure that can store a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.</p></h5>
+
+           <p><h5>Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.</p></h5>
+
+           <p><h5>All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.</p></h5>
+
+           <p><h2><b>Declaring Arrays:</b></p></h2>
+
+           <p><h5>To declare an array in C, a programmer specifies the type of the elements and the number of elements required by an array as follows</p></h5>
+
+           <p><h5><b>type arrayName [ arraySize ];</b></p></h5>
+
+           <p><h5>This is called a single-dimensional array. The arraySize must be an integer constant greater than zero and type can be any valid C data type. For example, to declare a 10-element array called balance of type double, use this statement</p></h5>
+
+           <p><h5><b>double balance[10];</b></p></h5>
+
+           <p><h5>Here balance is a variable array which is sufficient to hold up to 10 double numbers.</p></h5>
+
+           <p><h2><b>Initializing Arrays:</b></h2></p>
+
+           <p><h5>You can initialize an array in C either one by one or using a single statement as follows</p></h5>
+
+           <p><h5><b>double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};</b></h5></p>
+
+           <p><h5>The number of values between braces { } cannot be larger than the number of elements that we declare for the array between square brackets [ ].</h5></p>
+
+            <p><h5>If you omit the size of the array, an array just big enough to hold the initialization is created. Therefore, if you write</h5></p>
+
+            <p><h5>double balance[] = {1000.0, 2.0, 3.4, 7.0, 50.0};</h5></p>
+
+            <p><h5>You will create exactly the same array as you did in the previous example. Following is an example to assign a single element of the array</h5></p>
+
+            <p><h5><b>balance[4] = 50.0;</b></h5></p>
+
+            <p><h5>The above statement assigns the 5th element in the array with a value of 50.0. All arrays have 0 as the index of their first element which is also called the base index and the last index of an array will be total size of the array minus 1. Shown below is the pictorial representation of the array we discussed above</h5></p>
+            <p><h2><b>Example Program</b></h2></p>
+
+            <p><h5>#include <stdio.h></h5></p>
+ 
+            <p><h5>int main () {</h5></p>
+
+            <p><h5>int n[ 10 ]; /* n is an array of 10 integers */</h5></p>
+            <p><h5>int i,j;</h5></p>
+ 
+            <p><h5>/* initialize elements of array n to 0 */ </h5></p>        
+            <p><h5>for ( i = 0; i < 10; i++ ) {</h5></p>
+            <p><h5>n[ i ] = i + 100; /* set element at location i to i + 100 */</h5></p>
+            <p><h5>}</h5></p>
+   
+            <p><h5>/* output each array element's value */</h5></p>
+            <p><h5>for (j = 0; j < 10; j++ ) {</h5></p>
+            <p><h5>printf("Element[%d] = %d\n", j, n[j] );</h5></p>
+            <p><h5>}</h5></p>
+ 
+            <p><h5>return 0;</h5></p>
+            <p><h5>}</h5></p>
+
+            <p><h2><b>Output:</b></h2></p>
+
+            <p><h5>Element[0] = 100</h5></p>
+            <p><h5>Element[1] = 101</h5></p>
+            <p><h5>Element[2] = 102</h5></p>
+            <p><h5>Element[3] = 103</h5></p>
+            <p><h5>Element[4] = 104</h5></p>
+            <p><h5>Element[5] = 105</h5></p>
+            <p><h5>Element[6] = 106</h5></p>
+            <p><h5>Element[7] = 107</h5></p>
+            <p><h5>Element[8] = 108</h5></p>
+            <p><h5>Element[9] = 109</h5></p>
+    </div>
+</div>
+{% endblock %}
